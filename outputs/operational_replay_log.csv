@@ -1,25 +1,25 @@
 run_id,operating_day,return_code,runtime_seconds,release_decision,validation_health_score,false_pass_rate,high_or_critical_findings,recent_250_exceptions,traffic_light_zone,recalibration_trigger,stdout_tail,stderr_tail
-1,2026-06-01,0,2.6108,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
+1,2026-06-01,0,2.7604,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
 Release decision: PASS
 Validation health score: 92.0
 False-pass rate: 0.000
 ",
-2,2026-06-02,0,2.735,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
+2,2026-06-02,0,2.7042,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
 Release decision: PASS
 Validation health score: 92.0
 False-pass rate: 0.000
 ",
-3,2026-06-03,0,2.7071,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
+3,2026-06-03,0,2.7399,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
 Release decision: PASS
 Validation health score: 92.0
 False-pass rate: 0.000
 ",
-4,2026-06-04,0,2.7335,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
+4,2026-06-04,0,2.9487,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
 Release decision: PASS
 Validation health score: 92.0
 False-pass rate: 0.000
 ",
-5,2026-06-05,0,2.7326,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
+5,2026-06-05,0,3.1936,PASS,92.0,,0,3.0,GREEN,False,"Pipeline completed.
 Release decision: PASS
 Validation health score: 92.0
 False-pass rate: 0.000

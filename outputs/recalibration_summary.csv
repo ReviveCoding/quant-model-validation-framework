@@ -1,2 +1,2 @@
 num_operating_runs,pass_rate,review_or_block_rate,recalibration_trigger_rate,avg_runtime_seconds,max_runtime_seconds,avg_validation_health_score,min_validation_health_score,max_recent_250_exceptions
-5,1.0,0.0,0.0,2.7038,2.735,92.0,92.0,3.0
+5,1.0,0.0,0.0,2.8694,3.1936,92.0,92.0,3.0
