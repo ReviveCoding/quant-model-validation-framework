@@ -73,6 +73,7 @@ src\validation\kupiec_test.py,778,29bde26f99d8
 src\validation\no_arbitrage_checks.py,511,5739c7d56507
 src\validation\risk_factor_modellability.py,1727,e2e41b0cedc9
 src\validation\stress_scenario_coverage.py,1321,7d3f196aa1e3
+scripts\evaluate_performance.py,3144,e15985139a01
 scripts\run_pipeline.py,20746,2080d812c0b7
 tests\test_apl_hpl_backtesting.py,520,28e559595e0d
 tests\test_artifact_manifest.py,410,4de48c7d23a6
@@ -100,7 +101,7 @@ outputs\apl_hpl_backtesting_comparison.csv,260,ffeb6072c35d
 outputs\apl_hpl_backtesting_detail.csv,110657,6493f82bb67d
 outputs\apl_hpl_backtesting_summary.csv,425,2d9241d35d5f
 outputs\apl_hpl_backtesting_tests.csv,372,762f4358bf26
-outputs\artifact_manifest.csv,8222,248ea06003df
+outputs\artifact_manifest.csv,8395,1856111719fc
 outputs\assumption_sensitivity_matrix.csv,385,35c6c7e36884
 outputs\asymmetric_validation_envelope.csv,35114,e6c862135234
 outputs\backtesting_exceptions.csv,49809,100fc6c670a2
@@ -120,6 +121,7 @@ outputs\model_inventory.csv,1000,a3de47ce1e31
 outputs\model_risk_findings.csv,248,ad1fd85db8dc
 outputs\no_arbitrage_checks.csv,56,1d940c1470dc
 outputs\non_github_artifacts.csv,24545,029fcdfbdf64
+outputs\performance_evaluation_summary.json,1347,4d99aadbedb7
 outputs\pnl_attribution_component_summary.csv,398,8bd2e3b2d69f
 outputs\pnl_attribution_proxy_detail.csv,100218,405d07a71cca
 outputs\pnl_attribution_proxy_summary.csv,302,95f7e7482844
@@ -133,7 +135,7 @@ outputs\release_decision.json,291,95dbf607a64b
 outputs\residual_error_correction_detail.csv,33012,d08ec78e7679
 outputs\residual_error_correction_summary.csv,153,e9e68105f58b
 outputs\risk_factor_modellability_proxy.csv,613,acb905b2bc06
-outputs\run_manifest.json,722,81a973026bc2
+outputs\run_manifest.json,722,c690900b8ace
 outputs\seed_stability.csv,468,7464022762c6
 outputs\stress_loss_results.csv,360,b2788779dd2f
 outputs\stress_scenario_coverage.csv,173,5f86e6dde792
@@ -146,12 +148,13 @@ outputs\var_es_results.csv,188,0a29f0b332f0
 reports\assumption_impact_report.md,476,d6846c3596d7
 reports\compensating_controls.md,378,5df4f48ac489
 reports\executive_summary.md,1020,951009b06eb6
-reports\github_runnable_audit.md,37573,a3c141b69cb7
+reports\github_runnable_audit.md,37573,dbc4fdb3b8ef
 reports\known_limitations.md,524,87963c5a9ece
 reports\model_card.md,472,599a403b9749
 reports\model_risk_validation_memo.md,1173,ea4d4908a0c6
 reports\model_scope_and_use_case.md,2113,b40959b12c34
 reports\numerical_reliability_report.md,2265,daca0fde6914
+reports\performance_evaluation_report.md,478,ea5eedf6e60e
 reports\pricing_validation_report.md,1279,e038090c7157
 reports\public_market_data_validation_report.md,3930,15b7411ea037
 reports\regulatory_mapping_memo.md,2433,e853963fbd2b
