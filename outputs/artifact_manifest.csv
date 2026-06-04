@@ -74,6 +74,7 @@ src\validation\no_arbitrage_checks.py,511,5739c7d56507
 src\validation\risk_factor_modellability.py,1727,e2e41b0cedc9
 src\validation\stress_scenario_coverage.py,1321,7d3f196aa1e3
 scripts\evaluate_performance.py,3144,e15985139a01
+scripts\run_operational_replay.py,7584,06f19a935609
 scripts\run_pipeline.py,20746,2080d812c0b7
 tests\test_apl_hpl_backtesting.py,520,28e559595e0d
 tests\test_artifact_manifest.py,410,4de48c7d23a6
@@ -87,6 +88,7 @@ tests\test_liquidity_horizon_es.py,483,b950b9c040ab
 tests\test_monte_carlo.py,302,ab20977ed411
 tests\test_no_arbitrage.py,418,0a910c2b9482
 tests\test_numerical_tolerance.py,516,07e92d925a18
+tests\test_operational_replay.py,633,da142030ac2f
 tests\test_pnl_attribution.py,553,c0fe2c7fc3b0
 tests\test_public_market_data.py,471,b34b73a2af31
 tests\test_regulatory_mapping.py,246,189c1842c8b5
@@ -101,7 +103,7 @@ outputs\apl_hpl_backtesting_comparison.csv,260,ffeb6072c35d
 outputs\apl_hpl_backtesting_detail.csv,110657,6493f82bb67d
 outputs\apl_hpl_backtesting_summary.csv,425,2d9241d35d5f
 outputs\apl_hpl_backtesting_tests.csv,372,762f4358bf26
-outputs\artifact_manifest.csv,8395,1856111719fc
+outputs\artifact_manifest.csv,8714,f6611f1871a0
 outputs\assumption_sensitivity_matrix.csv,385,35c6c7e36884
 outputs\asymmetric_validation_envelope.csv,35114,e6c862135234
 outputs\backtesting_exceptions.csv,49809,100fc6c670a2
@@ -121,7 +123,8 @@ outputs\model_inventory.csv,1000,a3de47ce1e31
 outputs\model_risk_findings.csv,248,ad1fd85db8dc
 outputs\no_arbitrage_checks.csv,56,1d940c1470dc
 outputs\non_github_artifacts.csv,24545,029fcdfbdf64
-outputs\performance_evaluation_summary.json,1347,4d99aadbedb7
+outputs\operational_replay_log.csv,979,aaf9db7d26c3
+outputs\performance_evaluation_summary.json,1348,6c053614e88a
 outputs\pnl_attribution_component_summary.csv,398,8bd2e3b2d69f
 outputs\pnl_attribution_proxy_detail.csv,100218,405d07a71cca
 outputs\pnl_attribution_proxy_summary.csv,302,95f7e7482844
@@ -130,12 +133,13 @@ outputs\public_risk_factor_correlation.csv,397,07b33cb5839c
 outputs\public_risk_factor_panel.csv,46472,263bda4b477d
 outputs\public_risk_factor_summary.csv,478,78ef624b6cad
 outputs\rate_model_sanity.csv,195,ff041bd5186b
+outputs\recalibration_summary.csv,242,2cca09494e0b
 outputs\regulatory_mapping_table.csv,1225,ec5f5faf82da
 outputs\release_decision.json,291,95dbf607a64b
 outputs\residual_error_correction_detail.csv,33012,d08ec78e7679
 outputs\residual_error_correction_summary.csv,153,e9e68105f58b
 outputs\risk_factor_modellability_proxy.csv,613,acb905b2bc06
-outputs\run_manifest.json,722,c690900b8ace
+outputs\run_manifest.json,722,6f7d8fa435f6
 outputs\seed_stability.csv,468,7464022762c6
 outputs\stress_loss_results.csv,360,b2788779dd2f
 outputs\stress_scenario_coverage.csv,173,5f86e6dde792
@@ -151,10 +155,12 @@ reports\executive_summary.md,1020,951009b06eb6
 reports\github_runnable_audit.md,37573,dbc4fdb3b8ef
 reports\known_limitations.md,524,87963c5a9ece
 reports\model_card.md,472,599a403b9749
+reports\model_operations_runbook.md,932,694293ddd9ad
 reports\model_risk_validation_memo.md,1173,ea4d4908a0c6
 reports\model_scope_and_use_case.md,2113,b40959b12c34
 reports\numerical_reliability_report.md,2265,daca0fde6914
-reports\performance_evaluation_report.md,478,ea5eedf6e60e
+reports\operational_replay_report.md,2825,00eaec6b90be
+reports\performance_evaluation_report.md,479,8cc364994e6c
 reports\pricing_validation_report.md,1279,e038090c7157
 reports\public_market_data_validation_report.md,3930,15b7411ea037
 reports\regulatory_mapping_memo.md,2433,e853963fbd2b
