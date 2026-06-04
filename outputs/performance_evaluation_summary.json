@@ -1,0 +1,33 @@
+{
+  "purpose": "Lightweight local/GitHub runtime and artifact audit for the quant model validation framework.",
+  "python_executable": "C:\\Users\\bjw-0\\Downloads\\quant_model_validation_framework\\.venv\\Scripts\\python.exe",
+  "pipeline": {
+    "command": "C:\\Users\\bjw-0\\Downloads\\quant_model_validation_framework\\.venv\\Scripts\\python.exe scripts/run_pipeline.py",
+    "return_code": 0,
+    "runtime_seconds": 2.7125,
+    "stdout_tail": "Pipeline completed.\nRelease decision: PASS\nValidation health score: 92.0\nFalse-pass rate: 0.000\n",
+    "stderr_tail": ""
+  },
+  "pytest": {
+    "command": "C:\\Users\\bjw-0\\Downloads\\quant_model_validation_framework\\.venv\\Scripts\\python.exe -m pytest -q",
+    "return_code": 0,
+    "runtime_seconds": 2.2836,
+    "stdout_tail": "...........................                                              [100%]\n27 passed in 1.87s\n",
+    "stderr_tail": ""
+  },
+  "outputs": {
+    "path": "outputs",
+    "file_count": 48,
+    "total_kb": 669.74,
+    "largest_file": "outputs\\subportfolio_backtesting_detail.csv",
+    "largest_file_kb": 215.45
+  },
+  "reports": {
+    "path": "reports",
+    "file_count": 17,
+    "total_kb": 70.43,
+    "largest_file": "reports\\github_runnable_audit.md",
+    "largest_file_kb": 36.69
+  },
+  "performance_eval_status": "PASS"
+}
