@@ -1,0 +1,2 @@
+check,cpu_value,gpu_value,relative_error,status
+cpu_gpu_consistency,17.899169100248407,,,NOT_RUN

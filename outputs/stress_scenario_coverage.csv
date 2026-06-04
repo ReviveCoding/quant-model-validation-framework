@@ -1,0 +1,5 @@
+check,value,status
+has_equity_down_scenario,True,PASS
+has_volatility_up_scenario,True,PASS
+has_rate_up_scenario,True,PASS
+equity_vol_ladder_loss_monotonicity,True,PASS

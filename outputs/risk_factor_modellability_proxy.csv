@@ -1,0 +1,5 @@
+risk_factor,observations,non_missing_observations,max_calendar_day_gap,stale_share,modellability_proxy,status,claim_boundary
+DGS2,260,260,3,0.0,MODELLABLE_PROXY,PASS,FRTB-inspired data-sufficiency proxy; not a formal modellability assessment
+DGS10,260,260,3,0.0,MODELLABLE_PROXY,PASS,FRTB-inspired data-sufficiency proxy; not a formal modellability assessment
+BAMLC0A0CM,260,260,3,0.0,MODELLABLE_PROXY,PASS,FRTB-inspired data-sufficiency proxy; not a formal modellability assessment
+BAMLH0A0HYM2,260,260,3,0.0,MODELLABLE_PROXY,PASS,FRTB-inspired data-sufficiency proxy; not a formal modellability assessment

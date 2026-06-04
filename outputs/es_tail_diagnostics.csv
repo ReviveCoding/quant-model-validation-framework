@@ -1,0 +1,4 @@
+method,alpha,var_99,es_99,es_var_ratio,tail_observations,exceedance_rate,realized_tail_mean_loss,es_minus_realized_tail_mean,status,claim_boundary
+historical,0.99,24056.408704789817,28054.327554272553,1.1661893468199482,8,0.01,28054.327554272553,0.0,PASS,ES tail diagnostic for model validation; not a formal regulatory ES backtest
+normal_monte_carlo,0.99,25093.119305202723,29001.045148376823,1.1557369490673024,7,0.00875,28502.320170396873,498.7249779799495,PASS,ES tail diagnostic for model validation; not a formal regulatory ES backtest
+student_t_monte_carlo,0.99,28237.26767127474,39991.02136373724,1.4162496821326442,3,0.00375,31076.34624884941,8914.675114887832,PASS,ES tail diagnostic for model validation; not a formal regulatory ES backtest

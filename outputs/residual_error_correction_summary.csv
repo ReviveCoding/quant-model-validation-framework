@@ -1,0 +1,2 @@
+baseline_mae,corrected_mae,relative_mae_reduction,residual_model
+0.23491420995311643,0.23780861173089624,-0.012321101300587396,closed_form_numpy_ridge

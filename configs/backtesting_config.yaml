@@ -1,0 +1,3 @@
+window: 250
+confidence_level: 0.99
+min_backtest_days: 300

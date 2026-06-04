@@ -1,0 +1,2 @@
+def model_card_text():
+    return """# Model Card\n\n## Intended use\nOffline independent validation of pricing, rates, and market-risk simulation models.\n\n## Not intended use\nProduction trading, regulatory capital calculation, client decisioning, or real bank portfolio risk reporting.\n\n## Data\nSynthetic portfolios and public-data-shaped samples only.\n\n## Controls\nBenchmark comparison, tolerance gates, backtesting, numerical convergence checks, asymmetric validation envelope, and release gate.\n"""

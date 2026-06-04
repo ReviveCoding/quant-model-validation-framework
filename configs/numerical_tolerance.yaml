@@ -1,0 +1,5 @@
+mc_convergence_relative_tolerance: 0.05
+cpu_gpu_relative_tolerance: 0.005
+finite_difference_step_grid: [0.001, 0.005, 0.01]
+seed_stability_std_warn: 0.04
+seed_stability_std_block: 0.08

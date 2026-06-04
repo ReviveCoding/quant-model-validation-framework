@@ -1,0 +1,1 @@
+from risk.full_revaluation import delta_gamma_change

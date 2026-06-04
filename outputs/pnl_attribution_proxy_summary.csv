@@ -1,0 +1,2 @@
+pla_proxy_correlation,pla_proxy_rmse,actual_pnl_std,unexplained_share,actual_on_explained_slope,status,residual_risk_budget,claim_boundary
+0.9293298333062923,3936.440519888443,10652.280821480665,0.36953968693263184,0.979856612292351,PASS,0.4,P&L attribution proxy only; not an official FRTB PLA test

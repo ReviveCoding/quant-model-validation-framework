@@ -1,0 +1,2 @@
+apl_recent_250_exceptions,hpl_recent_250_exceptions,apl_hpl_exception_gap,apl_hpl_correlation,residual_std_share,status,claim_boundary
+3,4,1,0.9293298333062925,0.3697445738416418,PASS,APL/HPL backtesting proxy only; not an official FRTB P&L attribution test

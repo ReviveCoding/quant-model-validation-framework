@@ -1,0 +1,16 @@
+item,exists,type
+README.md,True,file
+PROJECT_CARD.md,True,file
+Makefile,True,file
+pyproject.toml,True,file
+requirements.txt,True,file
+.gitignore,True,file
+Dockerfile,True,file
+.dockerignore,True,file
+.github/workflows/ci.yml,True,file
+scripts/run_pipeline.py,True,file
+tests,True,dir
+src,True,dir
+configs,True,dir
+outputs,True,dir
+reports,True,dir

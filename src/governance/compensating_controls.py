@@ -1,0 +1,2 @@
+def controls_text():
+    return """# Compensating Controls\n\n- Use benchmark and challenger models rather than a single model output.\n- Escalate VaR underestimation, no-arbitrage violations, and Greek inconsistencies to REVIEW/BLOCK.\n- Require validation memo, known limitations, and release decision before resume/public claim usage.\n- Preserve synthetic/public-data claim boundaries in README and reports.\n"""

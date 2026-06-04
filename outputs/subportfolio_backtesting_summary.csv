@@ -1,0 +1,5 @@
+subportfolio,n_obs,exceptions,exception_rate,severity_sum,recent_250_obs,recent_250_exceptions,recent_250_exception_rate,recent_250_severity_sum,traffic_light_zone,traffic_light_basis
+derivatives,550,10,0.01818181818181818,20065.39780052631,250,6,0.024,5587.807535050504,YELLOW,most_recent_250_observations
+rates,550,7,0.012727272727272728,5400.060485119505,250,4,0.016,3538.511442431285,GREEN,most_recent_250_observations
+spread_proxy,550,8,0.014545454545454545,14944.79518534466,250,4,0.016,5543.358996237857,GREEN,most_recent_250_observations
+aggregate,550,8,0.014545454545454545,31586.83259241653,250,3,0.012,13062.660767888294,GREEN,most_recent_250_observations

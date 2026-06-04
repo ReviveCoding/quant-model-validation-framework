@@ -1,0 +1,3 @@
+test,exceptions,n_obs,lr_stat,p_value,status
+kupiec_pof,8.0,550.0,1.006591219290641,0.3157208646087737,PASS
+christoffersen_independence,,,0.2366075144529134,0.6266671558475516,PASS

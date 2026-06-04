@@ -1,0 +1,6 @@
+check,value,status
+row_count,800,PASS
+duplicate_dates,0,PASS
+missing_values_total,0,PASS
+stale_observations_proxy,82,PASS
+six_sigma_outliers,0,PASS

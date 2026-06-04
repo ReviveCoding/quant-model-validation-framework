@@ -1,0 +1,9 @@
+test,exceptions,n_obs,lr_stat,p_value,status,subportfolio
+kupiec_pof,10.0,550.0,2.9940329752416943,0.08357179348416865,PASS,derivatives
+christoffersen_independence,,,0.37107880372747104,0.5424168141645012,PASS,derivatives
+kupiec_pof,7.0,550.0,0.3804048265958784,0.5373866596235702,PASS,rates
+christoffersen_independence,,,0.1808168350246575,0.6706722032130408,PASS,rates
+kupiec_pof,8.0,550.0,1.006591219290641,0.3157208646087737,PASS,spread_proxy
+christoffersen_independence,,,0.2366075144529134,0.6266671558475516,PASS,spread_proxy
+kupiec_pof,8.0,550.0,1.006591219290641,0.3157208646087737,PASS,aggregate
+christoffersen_independence,,,0.2366075144529134,0.6266671558475516,PASS,aggregate

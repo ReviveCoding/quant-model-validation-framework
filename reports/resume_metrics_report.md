@@ -1,0 +1,19 @@
+# Resume Metrics Report
+
+Generated: 2026-06-04
+
+## Baseline vs final validation summary
+
+| metric                        | value   | interpretation                                                                                        |
+|:------------------------------|:--------|:------------------------------------------------------------------------------------------------------|
+| baseline_false_pass_rate      | 0.0625  | Naive tolerance-only gate passing cases with one-sided underestimation risk.                          |
+| final_false_pass_rate         | 0.0     | False-pass rate after residual challenger, asymmetric envelope, and release gate.                     |
+| relative_false_pass_reduction | 1.0     | Relative reduction from baseline to final validation framework.                                       |
+| baseline_risky_cases          | 7       | Cases caught only after applying one-sided risk-underestimation logic.                                |
+| final_block_cases             | 1       | Final asymmetric-envelope BLOCK cases after residual correction.                                      |
+| high_or_critical_findings     | 0       | Findings requiring review or blocking release.                                                        |
+| final_release_decision        | PASS    | PASS/REVIEW/BLOCK decision from validation health score, finding severity, and final false-pass rate. |
+
+## Recommended phrasing
+
+Use false-pass reduction, subportfolio backtesting, regulatory-style mapping, and public-data sample validation as evidence. Do not claim production trading-desk or regulatory-capital use.

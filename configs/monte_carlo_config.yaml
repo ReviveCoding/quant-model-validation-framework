@@ -1,0 +1,4 @@
+paths_default: 20000
+paths_grid: [1000, 2500, 5000, 10000, 20000]
+seed_grid: [7, 11, 19, 23, 31]
+confidence_level: 0.99

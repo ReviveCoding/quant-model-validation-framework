@@ -1,0 +1,5 @@
+subportfolio,alpha,liquidity_horizon_days,base_10day_es_proxy,scaled_liquidity_horizon_es_proxy,scaling_multiplier,claim_boundary,component_scaled_es_sum_proxy,status
+derivatives,0.975,10,11519.552459199469,11519.552459199469,1.0,FRTB-inspired liquidity-horizon ES proxy; not a regulatory capital calculation,50696.34272842646,PASS
+rates,0.975,20,5392.227284121889,7625.760956603417,1.4142135623730951,FRTB-inspired liquidity-horizon ES proxy; not a regulatory capital calculation,50696.34272842646,PASS
+spread_proxy,0.975,60,12880.653779253807,31551.029312623577,2.449489742783178,FRTB-inspired liquidity-horizon ES proxy; not a regulatory capital calculation,50696.34272842646,PASS
+aggregate,0.975,10,24511.027103116812,24511.027103116812,1.0,FRTB-inspired liquidity-horizon ES proxy; not a regulatory capital calculation,50696.34272842646,PASS

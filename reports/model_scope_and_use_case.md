@@ -1,0 +1,26 @@
+# Model Scope and Use Case
+
+Generated: 2026-06-04
+
+## Scope
+
+Independent validation of pricing, rates, Monte Carlo simulation, VaR/ES, backtesting, and numerical reliability.
+
+## Data boundary
+
+Synthetic portfolios and public-data-shaped sample files only. No proprietary bank data.
+
+## Public-data sample mode
+
+Federal Reserve H.15-style Treasury rates and FRED ICE BofA OAS-style spread samples are validated for missing/stale/outlier observations and risk-factor shocks.
+
+## Model inventory
+
+| model_id      | model_name                              | purpose                                              | risk_tier   | validation_scope                                                    |
+|:--------------|:----------------------------------------|:-----------------------------------------------------|:------------|:--------------------------------------------------------------------|
+| BS_EURO_CALL  | Black-Scholes European Option           | closed-form benchmark for European call pricing      | medium      | analytic price and Greeks, no-arbitrage checks, benchmark reference |
+| BINOMIAL_TREE | Cox-Ross-Rubinstein Binomial Tree       | discrete-time option pricing challenger              | medium      | convergence to Black-Scholes and early-exercise sanity checks       |
+| MC_OPTION     | Monte Carlo Option Pricing              | simulation-based pricing benchmark                   | high        | confidence intervals, seed stability, convergence diagnostics       |
+| HESTON_SIM    | Heston Stochastic Volatility Simulation | stochastic-volatility challenger model               | high        | volatility stress, price sanity, benchmark comparison               |
+| VASICEK_CIR   | Vasicek and CIR Interest-Rate Models    | short-rate path simulation and rate model validation | medium      | path positivity, mean reversion, moment sanity checks               |
+| VAR_ES        | VaR and Expected Shortfall Engine       | portfolio risk measurement and backtesting           | high        | rolling 250-day backtesting, Kupiec, Christoffersen, stress loss    |

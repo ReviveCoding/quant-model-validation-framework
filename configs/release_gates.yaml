@@ -1,0 +1,7 @@
+release_gate:
+  pass_min_health_score: 80
+  review_min_health_score: 60
+  max_critical_findings_pass: 0
+  max_high_findings_pass: 1
+  max_false_pass_rate_pass: 0.10
+  max_false_pass_rate_review: 0.20

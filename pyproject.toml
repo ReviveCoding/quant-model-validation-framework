@@ -1,0 +1,9 @@
+[project]
+name = "quant-model-validation-framework"
+version = "0.1.0"
+description = "Offline independent quant model validation and numerical risk simulation framework"
+requires-python = ">=3.10,<3.13"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

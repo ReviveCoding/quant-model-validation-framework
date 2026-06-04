@@ -1,0 +1,8 @@
+{
+  "release_decision": "PASS",
+  "validation_health_score": 92.0,
+  "critical_findings": 0,
+  "high_findings": 0,
+  "false_pass_rate": 0.0,
+  "claim_boundary": "offline synthetic/public-data-sample independent validation framework; non-production; not regulatory-capital compliant"
+}

@@ -1,0 +1,13 @@
+option_grid:
+  n_options: 240
+  seed: 123
+  spot_min: 70
+  spot_max: 130
+  strike_min: 75
+  strike_max: 125
+  maturity_min: 0.08
+  maturity_max: 2.0
+  volatility_min: 0.12
+  volatility_max: 0.55
+  rate_min: 0.01
+  rate_max: 0.06

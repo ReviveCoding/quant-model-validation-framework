@@ -1,0 +1,2 @@
+n_obs,exceptions,exception_rate,severity_sum,recent_250_obs,recent_250_exceptions,recent_250_exception_rate,recent_250_severity_sum,traffic_light_zone,traffic_light_basis
+550,8,0.014545454545454545,31586.83259241653,250,3,0.012,13062.660767888294,GREEN,most_recent_250_observations

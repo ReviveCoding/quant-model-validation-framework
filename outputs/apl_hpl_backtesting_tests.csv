@@ -1,0 +1,5 @@
+test,exceptions,n_obs,lr_stat,p_value,status,pnl_type
+kupiec_pof,8.0,550.0,1.006591219290641,0.3157208646087737,PASS,APL_proxy
+christoffersen_independence,,,0.2366075144529134,0.6266671558475516,PASS,APL_proxy
+kupiec_pof,7.0,550.0,0.3804048265958784,0.5373866596235702,PASS,HPL_proxy
+christoffersen_independence,,,0.1808168350246575,0.6706722032130408,PASS,HPL_proxy

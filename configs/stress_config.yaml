@@ -1,0 +1,17 @@
+stress_scenarios:
+  - name: equity_down_10_vol_up
+    equity_shock: -0.10
+    volatility_shock: 0.10
+    rate_shock: 0.0025
+  - name: equity_down_25_vol_spike
+    equity_shock: -0.25
+    volatility_shock: 0.25
+    rate_shock: 0.0050
+  - name: rate_up_100bp
+    equity_shock: -0.03
+    volatility_shock: 0.05
+    rate_shock: 0.0100
+  - name: liquidity_spread_stress
+    equity_shock: -0.08
+    volatility_shock: 0.12
+    rate_shock: 0.0040

@@ -1,0 +1,31 @@
+models:
+  - model_id: BS_EURO_CALL
+    model_name: Black-Scholes European Option
+    purpose: closed-form benchmark for European call pricing
+    risk_tier: medium
+    validation_scope: analytic price and Greeks, no-arbitrage checks, benchmark reference
+  - model_id: BINOMIAL_TREE
+    model_name: Cox-Ross-Rubinstein Binomial Tree
+    purpose: discrete-time option pricing challenger
+    risk_tier: medium
+    validation_scope: convergence to Black-Scholes and early-exercise sanity checks
+  - model_id: MC_OPTION
+    model_name: Monte Carlo Option Pricing
+    purpose: simulation-based pricing benchmark
+    risk_tier: high
+    validation_scope: confidence intervals, seed stability, convergence diagnostics
+  - model_id: HESTON_SIM
+    model_name: Heston Stochastic Volatility Simulation
+    purpose: stochastic-volatility challenger model
+    risk_tier: high
+    validation_scope: volatility stress, price sanity, benchmark comparison
+  - model_id: VASICEK_CIR
+    model_name: Vasicek and CIR Interest-Rate Models
+    purpose: short-rate path simulation and rate model validation
+    risk_tier: medium
+    validation_scope: path positivity, mean reversion, moment sanity checks
+  - model_id: VAR_ES
+    model_name: VaR and Expected Shortfall Engine
+    purpose: portfolio risk measurement and backtesting
+    risk_tier: high
+    validation_scope: rolling 250-day backtesting, Kupiec, Christoffersen, stress loss
