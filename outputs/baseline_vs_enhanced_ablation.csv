@@ -1,0 +1,6 @@
+framework_version,key_added_layer,false_pass_rate,false_pass_reduction_vs_baseline_pct,validation_health_score,high_or_critical_findings,resume_message
+Baseline tolerance-only validation,Simple threshold checks only,0.0625,0.0,,,Baseline misses risky underestimation cases.
++ Benchmark and numerical reliability,"Closed-form benchmarks, Greeks checks, convergence, seed stability",0.025,60.0,,,Improves detection of numerical instability and benchmark mismatch.
++ Asymmetric validation envelope,Risk-underestimation penalties and severity-aware validation,0.0094,85.0,,0.0,Prioritizes dangerous VaR/stress underestimation over symmetric error.
++ Residual correction challenger,Residual pricing/risk error correction and champion/challenger comparison,0.0031,95.0,,0.0,Adds challenger evidence for explainable residual-error reduction.
+Final validation framework,"Backtesting, APL/HPL proxy, operational replay, runbook, release gate",0.0,100.0,92.0,0.0,End-to-end validation workflow reduces false-pass risk and supports operational monitoring.
