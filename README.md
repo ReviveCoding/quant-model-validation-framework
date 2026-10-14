@@ -2,7 +2,7 @@
 
 An offline, end-to-end **independent quant model validation framework** for derivatives, interest-rate models, Monte Carlo risk simulation, VaR/Expected Shortfall backtesting, numerical reliability, and model-risk governance artifacts.
 
-This repository was designed as a non-production portfolio project for market-risk/model-validation roles. It uses synthetic portfolios by default, optional public-data sample files shaped after Federal Reserve H.15 Treasury-rate and FRED ICE BofA OAS-style data, and conservative claim boundaries.
+This is a non-production research and validation project using public-data samples and synthetic portfolios. It uses synthetic portfolios by default, optional public-data sample files shaped after Federal Reserve H.15 Treasury-rate and FRED ICE BofA OAS-style data, and conservative claim boundaries.
 
 ## What this project demonstrates
 
@@ -89,7 +89,6 @@ Key files:
 - `reports/model_risk_validation_memo.md`
 - `reports/executive_summary.md`
 
-
 ## Optional dashboard
 
 The dashboard dependencies are kept separate from the core validation dependencies so GitHub Actions and Docker validation stay lightweight.
@@ -105,9 +104,3 @@ streamlit run src/dashboard/streamlit_app.py
 docker build -t qmv-framework .
 docker run --rm qmv-framework
 ```
-
-## Resume-safe framing
-
-> Built an independent Python quant model validation framework for derivative pricing, interest-rate models, and market-risk simulation, covering Black-Scholes, binomial tree, Monte Carlo, Heston, Vasicek/CIR rates, no-arbitrage checks, Greeks validation, full-revaluation vs delta-gamma P&L, VaR/Expected Shortfall, stress diagnostics, and Kupiec/Christoffersen backtesting.
-
-> Added numerical-reliability and model-risk controls including public-data sample validation, subportfolio VaR backtesting, Monte Carlo convergence diagnostics, finite-difference tolerance gates, seed-stability tests, asymmetric validation envelopes, residual error-correction challengers, regulatory-style mapping, finding severity, validation memos, model cards, known limitations, and conservative synthetic/public-data claim boundaries.
