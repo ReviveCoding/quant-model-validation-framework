@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import subprocess
@@ -8,7 +8,6 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ROOT / "outputs"
@@ -30,13 +29,25 @@ def run_pipeline_once(run_id: int, operating_day: str) -> dict:
     findings_path = OUTPUTS / "model_risk_findings.csv"
     backtest_path = OUTPUTS / "backtesting_summary.csv"
 
-    release = json.loads(release_path.read_text(encoding="utf-8")) if release_path.exists() else {}
+    release = (
+        json.loads(release_path.read_text(encoding="utf-8"))
+        if release_path.exists()
+        else {}
+    )
     health = pd.read_csv(health_path) if health_path.exists() else pd.DataFrame()
     findings = pd.read_csv(findings_path) if findings_path.exists() else pd.DataFrame()
     backtest = pd.read_csv(backtest_path) if backtest_path.exists() else pd.DataFrame()
 
-    health_score = float(health["validation_health_score"].iloc[0]) if "validation_health_score" in health.columns and len(health) else np.nan
-    final_false_pass = float(health["false_pass_rate"].iloc[0]) if "false_pass_rate" in health.columns and len(health) else np.nan
+    health_score = (
+        float(health["validation_health_score"].iloc[0])
+        if "validation_health_score" in health.columns and len(health)
+        else np.nan
+    )
+    final_false_pass = (
+        float(health["false_pass_rate"].iloc[0])
+        if "false_pass_rate" in health.columns and len(health)
+        else np.nan
+    )
 
     high_or_critical = 0
     if len(findings) and "severity" in findings.columns:
@@ -83,13 +94,23 @@ def build_recalibration_summary(log: pd.DataFrame) -> pd.DataFrame:
             {
                 "num_operating_runs": len(log),
                 "pass_rate": round((log["release_decision"] == "PASS").mean(), 4),
-                "review_or_block_rate": round(log["release_decision"].isin(["REVIEW", "BLOCK"]).mean(), 4),
-                "recalibration_trigger_rate": round(log["recalibration_trigger"].mean(), 4),
+                "review_or_block_rate": round(
+                    log["release_decision"].isin(["REVIEW", "BLOCK"]).mean(), 4
+                ),
+                "recalibration_trigger_rate": round(
+                    log["recalibration_trigger"].mean(), 4
+                ),
                 "avg_runtime_seconds": round(log["runtime_seconds"].mean(), 4),
                 "max_runtime_seconds": round(log["runtime_seconds"].max(), 4),
-                "avg_validation_health_score": round(log["validation_health_score"].mean(), 4),
-                "min_validation_health_score": round(log["validation_health_score"].min(), 4),
-                "max_recent_250_exceptions": round(log["recent_250_exceptions"].max(), 4),
+                "avg_validation_health_score": round(
+                    log["validation_health_score"].mean(), 4
+                ),
+                "min_validation_health_score": round(
+                    log["validation_health_score"].min(), 4
+                ),
+                "max_recent_250_exceptions": round(
+                    log["recent_250_exceptions"].max(), 4
+                ),
             }
         ]
     )
@@ -131,7 +152,9 @@ def write_reports(log: pd.DataFrame, summary: pd.DataFrame) -> None:
         "- This is not a regulatory capital engine and should be described as a synthetic/public-sample operational replay.",
     ]
 
-    (REPORTS / "operational_replay_report.md").write_text("\n".join(report), encoding="utf-8")
+    (REPORTS / "operational_replay_report.md").write_text(
+        "\n".join(report), encoding="utf-8"
+    )
 
     runbook = [
         "# Model Operations Runbook",
@@ -161,7 +184,9 @@ def write_reports(log: pd.DataFrame, summary: pd.DataFrame) -> None:
         "This runbook supports a local, synthetic/public-sample, non-production validation project. It does not claim production trading, official regulatory capital, or bank-approved model use.",
     ]
 
-    (REPORTS / "model_operations_runbook.md").write_text("\n".join(runbook), encoding="utf-8")
+    (REPORTS / "model_operations_runbook.md").write_text(
+        "\n".join(runbook), encoding="utf-8"
+    )
 
 
 def main() -> None:
@@ -181,7 +206,11 @@ def main() -> None:
     summary.to_csv(OUTPUTS / "recalibration_summary.csv", index=False)
     write_reports(log, summary)
 
-    status = "PASS" if (log["return_code"].eq(0).all() and summary["pass_rate"].iloc[0] >= 0.8) else "REVIEW"
+    status = (
+        "PASS"
+        if (log["return_code"].eq(0).all() and summary["pass_rate"].iloc[0] >= 0.8)
+        else "REVIEW"
+    )
 
     print("Operational replay completed.")
     print(f"Status: {status}")

@@ -1,5 +1,5 @@
-from models.black_scholes import bs_call_price
 from models.binomial_tree import binomial_call_price
+from models.black_scholes import bs_call_price
 
 
 def test_binomial_converges_near_bs():
