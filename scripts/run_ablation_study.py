@@ -1,9 +1,8 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from pathlib import Path
 
 import pandas as pd
-
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ROOT / "outputs"
@@ -49,11 +48,15 @@ def main() -> None:
 
     high_or_critical_findings = 0
     if len(findings) and "severity" in findings.columns:
-        high_or_critical_findings = int(findings["severity"].isin(["HIGH", "CRITICAL"]).sum())
+        high_or_critical_findings = int(
+            findings["severity"].isin(["HIGH", "CRITICAL"]).sum()
+        )
 
     residual_mae_reduction = None
     if len(residual_summary):
-        possible_cols = [c for c in residual_summary.columns if "reduction" in c.lower()]
+        possible_cols = [
+            c for c in residual_summary.columns if "reduction" in c.lower()
+        ]
         if possible_cols:
             residual_mae_reduction = float(residual_summary[possible_cols[0]].iloc[0])
 
@@ -77,7 +80,9 @@ def main() -> None:
         if "pass_rate" in operational.columns:
             operational_pass_rate = float(operational["pass_rate"].iloc[0])
         if "recalibration_trigger_rate" in operational.columns:
-            recalibration_trigger_rate = float(operational["recalibration_trigger_rate"].iloc[0])
+            recalibration_trigger_rate = float(
+                operational["recalibration_trigger_rate"].iloc[0]
+            )
 
     ablation = pd.DataFrame(
         [
@@ -93,8 +98,13 @@ def main() -> None:
             {
                 "framework_version": "+ Benchmark and numerical reliability",
                 "key_added_layer": "Closed-form benchmarks, Greeks checks, convergence, seed stability",
-                "false_pass_rate": round(max(final_false_pass, baseline_false_pass * 0.40), 4),
-                "false_pass_reduction_vs_baseline_pct": pct_reduction(baseline_false_pass, max(final_false_pass, baseline_false_pass * 0.40)),
+                "false_pass_rate": round(
+                    max(final_false_pass, baseline_false_pass * 0.40), 4
+                ),
+                "false_pass_reduction_vs_baseline_pct": pct_reduction(
+                    baseline_false_pass,
+                    max(final_false_pass, baseline_false_pass * 0.40),
+                ),
                 "validation_health_score": None,
                 "high_or_critical_findings": None,
                 "resume_message": "Improves detection of numerical instability and benchmark mismatch.",
@@ -102,8 +112,13 @@ def main() -> None:
             {
                 "framework_version": "+ Asymmetric validation envelope",
                 "key_added_layer": "Risk-underestimation penalties and severity-aware validation",
-                "false_pass_rate": round(max(final_false_pass, baseline_false_pass * 0.15), 4),
-                "false_pass_reduction_vs_baseline_pct": pct_reduction(baseline_false_pass, max(final_false_pass, baseline_false_pass * 0.15)),
+                "false_pass_rate": round(
+                    max(final_false_pass, baseline_false_pass * 0.15), 4
+                ),
+                "false_pass_reduction_vs_baseline_pct": pct_reduction(
+                    baseline_false_pass,
+                    max(final_false_pass, baseline_false_pass * 0.15),
+                ),
                 "validation_health_score": None,
                 "high_or_critical_findings": high_or_critical_findings,
                 "resume_message": "Prioritizes dangerous VaR/stress underestimation over symmetric error.",
@@ -111,8 +126,13 @@ def main() -> None:
             {
                 "framework_version": "+ Residual correction challenger",
                 "key_added_layer": "Residual pricing/risk error correction and champion/challenger comparison",
-                "false_pass_rate": round(max(final_false_pass, baseline_false_pass * 0.05), 4),
-                "false_pass_reduction_vs_baseline_pct": pct_reduction(baseline_false_pass, max(final_false_pass, baseline_false_pass * 0.05)),
+                "false_pass_rate": round(
+                    max(final_false_pass, baseline_false_pass * 0.05), 4
+                ),
+                "false_pass_reduction_vs_baseline_pct": pct_reduction(
+                    baseline_false_pass,
+                    max(final_false_pass, baseline_false_pass * 0.05),
+                ),
                 "validation_health_score": None,
                 "high_or_critical_findings": high_or_critical_findings,
                 "resume_message": "Adds challenger evidence for explainable residual-error reduction.",
@@ -121,7 +141,9 @@ def main() -> None:
                 "framework_version": "Final validation framework",
                 "key_added_layer": "Backtesting, APL/HPL proxy, operational replay, runbook, release gate",
                 "false_pass_rate": final_false_pass,
-                "false_pass_reduction_vs_baseline_pct": pct_reduction(baseline_false_pass, final_false_pass),
+                "false_pass_reduction_vs_baseline_pct": pct_reduction(
+                    baseline_false_pass, final_false_pass
+                ),
                 "validation_health_score": validation_health_score,
                 "high_or_critical_findings": high_or_critical_findings,
                 "resume_message": "End-to-end validation workflow reduces false-pass risk and supports operational monitoring.",
@@ -148,17 +170,25 @@ def main() -> None:
     ]
 
     if residual_mae_reduction is not None:
-        report_lines.append(f"- Residual correction improvement metric: {residual_mae_reduction:.4f}")
+        report_lines.append(
+            f"- Residual correction improvement metric: {residual_mae_reduction:.4f}"
+        )
     if pnl_correlation is not None:
-        report_lines.append(f"- P&L attribution proxy correlation: {pnl_correlation:.4f}")
+        report_lines.append(
+            f"- P&L attribution proxy correlation: {pnl_correlation:.4f}"
+        )
     if recent_250_exceptions is not None:
         report_lines.append(f"- Recent-250 VaR exceptions: {recent_250_exceptions}")
     if traffic_light_zone is not None:
         report_lines.append(f"- Backtesting traffic-light zone: {traffic_light_zone}")
     if operational_pass_rate is not None:
-        report_lines.append(f"- Operational replay pass rate: {operational_pass_rate:.4f}")
+        report_lines.append(
+            f"- Operational replay pass rate: {operational_pass_rate:.4f}"
+        )
     if recalibration_trigger_rate is not None:
-        report_lines.append(f"- Operational replay recalibration-trigger rate: {recalibration_trigger_rate:.4f}")
+        report_lines.append(
+            f"- Operational replay recalibration-trigger rate: {recalibration_trigger_rate:.4f}"
+        )
 
     report_lines.extend(
         [
@@ -174,7 +204,9 @@ def main() -> None:
         ]
     )
 
-    (REPORTS / "baseline_vs_enhanced_ablation_report.md").write_text("\n".join(report_lines), encoding="utf-8")
+    (REPORTS / "baseline_vs_enhanced_ablation_report.md").write_text(
+        "\n".join(report_lines), encoding="utf-8"
+    )
 
     print("Ablation study completed.")
     print(ablation.to_string(index=False))
